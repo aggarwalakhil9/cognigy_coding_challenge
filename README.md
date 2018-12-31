@@ -71,5 +71,8 @@ A sample flow would look like as below. Some property fields are ignored for sim
 }
 ```
 
+## TREE STRUCTURE
+Use ``Flow Node Structure`` to reference to A tree diagram for how objects are stored in database.
+
 ## API details
 API details and logic is incorporated as part of code comments alongwith the code.
