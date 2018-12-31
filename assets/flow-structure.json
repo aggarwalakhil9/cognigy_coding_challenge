@@ -1,0 +1,126 @@
+{
+	"id": "start",
+	"sort": 0,
+	"type": "start",
+	"collapsed": false,
+	"data": {},
+	"children": [
+		{
+			"id": "$2a$05$rGwbQ0HwJKfPGogObRiuLuWcKwnmXfaNPzOSAgtTVAiUlmDCTGxeW",
+			"sort": 0,
+			"type": "cognigy",
+			"collapsed": false,
+			"data": {
+				"function": "once",
+				"args": {}
+			},
+			"children": [
+				{
+					"id": "$2a$05$uo/8vM/tYskBqRGxtuVjF.tFbE7rUFG/mjACyhbDnOrhbg.g82Fk2",
+					"sort": 0,
+					"type": "cognigy",
+					"collapsed": false,
+					"data": {
+						"function": "say",
+						"args": {
+							"text": [
+								"Hello and welcome @ Cognigy!"
+							],
+							"data": {},
+							"linear": false,
+							"loop": false
+						}
+					},
+					"children": []
+				},
+				{
+					"id": "$2a$05$g5BUZK9L2eoU4E24xjPlq.FVY65a4ggKDG0NTZhDEeZsx2vgmm66u",
+					"sort": 1,
+					"type": "cognigy",
+					"collapsed": false,
+					"data": {
+						"function": "stopFlow",
+						"args": {}
+					},
+					"children": []
+				}
+			]
+		},
+		{
+			"id": "$2a$05$R.luts6uL3HwqhDhSH9qSupP/VmPfaIiQPa0KakCfF7FpB5.Fq0BC",
+			"sort": 1,
+			"type": "if",
+			"collapsed": false,
+			"data": {
+				"condition": "ci.type === \\"Greeting\\""
+			},
+			"children": [
+				{
+					"id": "$2a$05$T3rcqrjatyhTPhABh29QweJmGFKFVOavmHUPH1tz9avDsZUxPUI6a",
+					"sort": 0,
+					"type": "then",
+					"collapsed": false,
+					"data": {},
+					"children": [
+						{
+							"id": "$2a$05$oBoh0I5S2Rx4CQN1bwcHTeJ6JHvnMSmlKyjUR0Iz/CUt45c9B6vR6",
+							"sort": 0,
+							"type": "cognigy",
+							"collapsed": false,
+							"data": {
+								"function": "say",
+								"args": {
+									"text": [
+										"I already greeted you!"
+									],
+									"data": {},
+									"linear": false,
+									"loop": false
+								}
+							},
+							"children": []
+						}
+					]
+				}
+			]
+		},
+		{
+			"id": "$2a$05$cjgWNsQyLktVFEdtvPwnx.io80hWiyKYVB43hc2EE8UNbBombSXsu",
+			"sort": 2,
+			"type": "if",
+			"collapsed": false,
+			"data": {
+				"condition": "ci.type !== \\"Greeting\\""
+			},
+			"children": [
+				{
+					"id": "$2a$05$lbYeBTNI5Xtjr3hE/jLP/ePzA4GLztHagFdeL9/fOFPO8GZ8Zdsr6",
+					"sort": 0,
+					"type": "then",
+					"collapsed": false,
+					"data": {},
+					"children": [
+						{
+							"id": "$2a$05$y4eU7tifegS.lcaCBbtp.O4IlVgjzn9oOG/7ogSAjx.nqQusC2x/.",
+							"sort": 0,
+							"type": "cognigy",
+							"collapsed": false,
+							"data": {
+								"function": "say",
+								"args": {
+									"text": [
+										"This was definitely not a greeting!"
+									],
+									"data": {},
+									"linear": false,
+									"loop": false
+								}
+							},
+							"children": []
+						}
+					]
+				}
+			]
+		}
+	]
+}
