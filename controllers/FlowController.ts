@@ -157,14 +157,23 @@ export class FlowController{
             });
             return;
         };
+
+        // if parentId is Root Parent, then there is no further parent to modify
+        let query = {};
+        if(node.parentId === constants.ROOT_PARENT_ID){
+            query = { _id: flowId, 'nodes.parentId': node.parentId };
+        }
+        else{
+            query = { _id: flowId, 'nodes._id': node.parentId };
+        }
+
         /*
             since not maintaining transactions, first delete references to this node as child in all parent nodes
             then delete this node and all children nodes 
             this helps in preventing any null pointers in case commit fails in between
-        */
+        */        
         let updateParentPromise = new Promise((resolve, reject) => {
-
-            Flow.findOneAndUpdate({ _id: flowId, 'nodes._id': node.parentId },
+            Flow.findOneAndUpdate(query,
                 { $pull: { 'nodes.$.children': node._id }, lastChanged: new Date()},
                 { 'new': true }
             ).then(() => {
