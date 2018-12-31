@@ -19,7 +19,7 @@
 		{
 			"id": "0487e096-b1f1-422d-af43-44edc8960069",
 			"name": "create parent node",
-			"url": "localhost:3000/flow/node/5c27b9551dc04b53ad69aece",
+			"url": "localhost:3000/flow/node",
 			"description": "",
 			"data": [],
 			"dataMode": "raw",
@@ -35,7 +35,7 @@
 			"auth": null,
 			"events": [],
 			"folder": null,
-			"rawModeData": "{\n\t\"node\": {\n\t\t\t\"parentId\": \"\",\n    \t\t\"children\": [],\n    \t\t\"sort\": 1,\n    \t\t\"type\": \"if\",\n    \t\t\"data\": {\n        \t\t\"function\": \"\"\n    \t\t}\n\t}\n}",
+			"rawModeData": "{\n\t\"flowId\": \"5c29be63679ddd1595c97680\",\n\t\"node\": {\n\t\t\t\"parentId\": \"ROOT PARENT\",\n    \t\t\"children\": [],\n    \t\t\"sort\": 1,\n    \t\t\"type\": \"once\",\n    \t\t\"data\": {\n        \t\t\"function\": \"\"\n    \t\t}\n\t}\n}",
 			"headers": "Content-Type: application/json\n",
 			"pathVariables": {}
 		},
@@ -58,14 +58,14 @@
 			"auth": null,
 			"events": [],
 			"folder": null,
-			"rawModeData": "{\n\t\"img\": \"image url\",\n    \"name\": \"Flow 1\",\n    \"version\": 1,\n    \"draft\": false,\n    \"createdAt\": 1546102718000,\n    \"createdBy\": \"aggaak\",\n    \"lastChanged\": 1546102818000,\n    \"lastChangedBy\": \"aggaak\",\n    \"nodes\": [\n    \t{\n\t    \t\"parentId\": \"\",\n\t    \t\"sort\": 1,\n\t    \t\"type\": \"cognigy\",\n\t    \t\"data\": {\n\t\t        \"function\": \"once\",\n\t\t\t\t\"args\": {}\n\t    \t},\n\t    \t\"children\": []\n    \t}\n    \t]\n}",
+			"rawModeData": "{\n\t\"img\": \"image url\",\n    \"name\": \"Flow 1\",\n    \"version\": 1,\n    \"draft\": false,\n    \"createdBy\": \"aggaak\",\n    \"lastChangedBy\": \"aggaak\",\n    \"nodes\": [\n    \t{\n\t    \t\"sort\": 1,\n\t    \t\"type\": \"cognigy\",\n\t    \t\"data\": {\n\t\t        \"function\": \"once\",\n\t\t\t\t\"args\": {}\n\t    \t},\n\t    \t\"children\": []\n    \t}\n    \t]\n}",
 			"headers": "Content-Type: application/json\n",
 			"pathVariables": {}
 		},
 		{
 			"id": "5c760ee9-ab07-4ea1-9d0a-e54e35604b77",
 			"name": "delete node",
-			"url": "localhost:3000/flow/node/5c27b9551dc04b53ad69aece",
+			"url": "localhost:3000/flow/node",
 			"description": "",
 			"data": [],
 			"dataMode": "raw",
@@ -81,7 +81,7 @@
 			"auth": null,
 			"events": [],
 			"folder": null,
-			"rawModeData": "{\n\t\"node\": {\n\t\t\"_id\": \"5c2839cb942de65d6acb1fdf\",\n\t\t\"parentId\": \"5c27cac84f08fd5d40b48eb9\",\n\t\t\"children\": [\"5c27cac84f08fd5d40b48eb9\", \"5c27cac84f08fd5d40b48eb9\", \"5c27cac84f08fd5d40b48eb9\"]\n\t}\n}",
+			"rawModeData": "{\n\t\"flowId\": \"5c29be63679ddd1595c97680\",\n\t\"node\": {\n\t\t\"_id\": \"5c29becf679ddd1595c9768c\",\n\t\t\"parentId\" : \"5c29be63679ddd1595c97681\",\n        \"children\" : [\"5c29beea679ddd1595c97690\", \"5c29beeb679ddd1595c97692\"]\n\t}\n}",
 			"headers": "Content-Type: application/json\n",
 			"pathVariables": {}
 		},
@@ -105,7 +105,7 @@
 		{
 			"id": "6d0b933e-18eb-486b-9d1a-71800dc6a50a",
 			"name": "create child node",
-			"url": "localhost:3000/flow/node/5c28870a6b966182fad4749f",
+			"url": "localhost:3000/flow/node",
 			"description": "",
 			"data": [],
 			"dataMode": "raw",
@@ -121,14 +121,14 @@
 			"auth": null,
 			"events": [],
 			"folder": null,
-			"rawModeData": "{\n\t\"node\": {\n\t\t\t\"parentId\": \"5c28e2eb6b966182fad474a1\",\n    \t\t\"children\": [],\n    \t\t\"sort\": 1,\n    \t\t\"type\": \"say\",\n    \t\t\"data\": {\n        \t\t\"function\": \"\"\n    \t\t}\n\t}\n}",
+			"rawModeData": "{\n\t\"flowId\": \"5c29be63679ddd1595c97680\",\n\t\"node\": {\n\t\t\t\"parentId\": \"5c29becf679ddd1595c9768c\",\n    \t\t\"children\": [],\n    \t\t\"sort\": 1,\n    \t\t\"type\": \"say\",\n    \t\t\"data\": {\n        \t\t\"function\": \"\"\n    \t\t}\n\t}\n}",
 			"headers": "Content-Type: application/json\n",
 			"pathVariables": {}
 		},
 		{
 			"id": "b8399119-8ffc-4739-80fd-87a77049663f",
 			"name": "update node",
-			"url": "localhost:3000/flow/node/5c27b9551dc04b53ad69aece",
+			"url": "localhost:3000/flow/node",
 			"description": "",
 			"data": [],
 			"dataMode": "raw",
@@ -144,7 +144,7 @@
 			"auth": null,
 			"events": [],
 			"folder": null,
-			"rawModeData": "{\n\t\"node\": {\n\t\t\t\"_id\": \"5c28545114bf3d6ad43a52dc\",\n\t\t\t\"parentId\": \"5c27cac84f08fd5d40b48eb9\",\n    \t\t\"children\": [],\n    \t\t\"sort\": 1,\n    \t\t\"type\": \"test1\",\n    \t\t\"data\": {\n        \t\t\"function\": \"\"\n    \t\t}\n\t}\n}",
+			"rawModeData": "{\n\t\"flowId\": \"5c29b7ad295db211bc567e23\",\n\t\"node\": {\n\t\t\t\"_id\": \"5c29b7f9295db211bc567e29\",\n\t\t\t\"parentId\": \"5c29b7c0295db211bc567e25\",\n    \t\t\"children\": [],\n    \t\t\"sort\": 1,\n    \t\t\"type\": \"if\",\n    \t\t\"data\": {\n        \t\t\"function\": \"\"\n    \t\t}\n\t}\n}",
 			"headers": "Content-Type: application/json\n",
 			"pathVariables": {}
 		}
