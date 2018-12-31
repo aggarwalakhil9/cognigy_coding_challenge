@@ -1,7 +1,7 @@
 import * as mongoose from 'mongoose';
 import { FlowSchema } from '../models/Flow';
 import { Request, Response } from 'express';
-import { IFlowNodes } from '../interfaces/IFlowNodes';
+import { INode, IFlowNodes } from '../interfaces/IFlowNodes';
 import constants from '../config/constants';
 
 
@@ -159,13 +159,7 @@ export class FlowController{
         };
 
         // if parentId is Root Parent, then there is no further parent to modify
-        let query = {};
-        if(node.parentId === constants.ROOT_PARENT_ID){
-            query = { _id: flowId, 'nodes.parentId': node.parentId };
-        }
-        else{
-            query = { _id: flowId, 'nodes._id': node.parentId };
-        }
+        let query = this.getQuery(flowId, node);        
 
         /*
             since not maintaining transactions, first delete references to this node as child in all parent nodes
@@ -227,5 +221,10 @@ export class FlowController{
             return true;
         }
         return false;
+    }
+
+    private getQuery = (flowId: String, node: INode): Object => {
+        return node.parentId === constants.ROOT_PARENT_ID ? 
+            { _id: flowId, 'nodes.parentId': node.parentId } : { _id: flowId, 'nodes._id': node.parentId };        
     }
 }

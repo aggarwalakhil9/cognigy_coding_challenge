@@ -1,6 +1,6 @@
 import * as mongoose from 'mongoose';
 
-interface INode {
+export interface INode {
     parentId: String,
     children: [String],
     _id: mongoose.Schema.Types.ObjectId,
