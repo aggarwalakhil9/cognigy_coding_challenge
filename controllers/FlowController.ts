@@ -121,8 +121,6 @@ export class FlowController{
             Flow.findOne({ "_id": flowId, "nodes._id": node._id}, 
                 {_id: 0, 'nodes.$': 1}
             ).then((resultNode: IFlowNodes) => {
-                console.log(resultNode.nodes[0].children);
-                console.log(node.children);
                 if(!resultNode || resultNode.nodes[0].parentId != node.parentId || !this.checkEquals(resultNode.nodes[0].children, node.children) ) {
                     reject( { message: "Cannot modify parentId or children of a node" } );
                 }
